@@ -1,0 +1,17 @@
+package nondefault;
+
+import java.util.Scanner;
+public class player {
+	Scanner sc = new Scanner(System.in);
+	int number = 0;
+	int guess;
+	int guessnum() {
+		System.out.println("Enter your guess between 0 and 9: ");
+		guess = sc.nextInt();
+		while(guess>9) {
+			System.out.println("Enter your guess between 0 and 9:");
+			guess = sc.nextInt();
+		}
+		return guess;
+	}
+}
