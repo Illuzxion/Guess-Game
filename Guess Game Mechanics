@@ -1,0 +1,41 @@
+package nondefault;
+
+public class guessgame {
+	player p1 = new player();
+	player p2 = new player();
+	player p3 = new player();
+	public void startgame() {
+		
+		int winningguess = (int)(Math.random() * 10);
+		
+		System.out.println("It is Player1's turn ");
+		p1.guessnum();
+		if(p1.guess == winningguess) {
+			System.out.println("Player1 has guessed the right number!");	
+		}
+		else {
+			System.out.println("It is Player2's turn ");
+			p2.guessnum();
+		}
+		if(p2.guess == winningguess) {
+			System.out.println("Player2 has guessed the right number!");
+		}
+		else {
+			System.out.println("It is Player3's turn");
+			p3.guessnum();
+		}
+		if(p3.guess == winningguess) {
+			System.out.println("Player3 has guessed the right number!");
+			
+		}
+		else {
+			
+		}
+		if(p1.guess != winningguess && p2.guess != winningguess && p3.guess != winningguess) {
+			System.out.println("Nobody has guessed the right number, game over!");
+			System.out.println("The right number was: " + winningguess);
+			
+		}
+	}
+	
+}
